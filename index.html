@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lowest Rates Test</title>
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Karma", sans-serif;
+        }
+
+        body {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+			cursor: pointer;
+			font-size: 20px;
+			position: fixed;
+			top: 0;
+			width: -webkit-fill-available;
+        }
+		
+		header > div {
+			padding: 16px;
+		}
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: #f4f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        nav a {
+            display: block;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+        }
+
+        main {
+            margin: 20px;
+            padding: 60px 20px 20px 20px;
+        }
+		
+		.animate-left {
+			animation: animateleft 0.4s;
+		}
+		
+		@keyframes animateleft {
+			from {
+				left: -300px;
+				opacity: 0;
+			} 
+			to {
+				left: 0;
+				opacity: 1;
+			}
+		}
+		
+		#card-section {
+		    display: flex;
+			flex-wrap: wrap;
+            justify-content: space-between;
+		}
+
+        #card-section > div {
+            width: 23%;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+		
+		#mySidebar > a {
+			padding: 10px;
+		}
+		
+		.pagination {
+		    text-align: center;
+		}
+		
+		.pagination > a {
+		    border: none;
+			display: inline-block;
+			padding: 8px 16px;
+			vertical-align: middle;
+			overflow: hidden;
+			text-decoration: none;
+			color: inherit;
+			background-color: inherit;
+			text-align: center;
+			cursor: pointer;
+			white-space: nowrap;
+		}
+		
+		.pagination > a.active {
+		    color: white;
+			background-color: #000!important;
+		}
+		
+		header > div:hover, .pagination > a:hover, .blog:hover, #mySidebar > a:hover  {
+			background-color: #ccc;
+			cursor: pointer;
+		}
+
+        section {
+            margin-bottom: 32px;
+			text-align: center;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+		
+		.tags {
+			color: #fff!important; 
+			background-color: #616161;
+			font-size: 12px;
+			padding: 0 8px;
+			cursor: pointer;
+		}
+		
+		.tags.active {
+			background-color: #000;
+		}
+		
+		footer {
+            background-color: #f4f4f4;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        footer div {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+		
+		.card-image {
+		    max-width: 150px;
+		}
+		
+		.blog > .blog-image {
+		    float: left !important;
+		    max-width: 50px;
+			padding: 8px 16px;
+		}
+		
+		.blog:not(:last-child) {
+			border-bottom: 2px solid #ddd;
+		}
+
+        @media screen and (max-width: 768px) {
+            nav {
+                width: 100%;
+            }
+			
+			footer {
+				display: block;
+			}
+			
+			#card-section > div {
+				width: 100%;
+            }
+		   
+		    main {
+				margin: 0px;
+				padding: 80px 20px 20px 20px;
+		    }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div onclick="toggleSidebar()">☰</div>
+    <div>Lowest Rates Test</div>
+    <div onclick="loginClick()">Login</div>
+</header>
+
+<nav id="mySidebar" class="animate-left">
+    <a href="javascript:void(0)" onclick="closeSidebar()">Close Menu&nbsp;&nbsp;X</a>
+    <a>Insurance</a>
+    <a>Mortgage</a>
+	<a>Home insurance</a>
+    <a>Life Property Insurance</a>
+	<a>Auto and Credit Cards</a>
+    <a>Travel Insurance</a>
+</nav>
+
+<main>
+
+    <section id="card-section">
+        <div>
+            <img src="assets/cc.jpg" alt="25 Cents" class="card-image">
+            <h3>Nice Mortgage Rates</h3>
+            <p>Come get the best mortgage rates at lowestrates.ca</p>
+        </div>
+		<div>
+            <img src="assets/cc.jpg" alt="25 Cents" class="card-image">
+            <h3>Get best car insurance</h3>
+            <p>Come get it at Ir.ca best car insurance. </p>
+        </div>
+		<div>
+            <img src="assets/cc.jpg" alt="25 Cents" class="card-image">
+            <h3>Best Home insurance</h3>
+            <p>Get your best car insruance. Get it now. Corne get it. best best of the best.<br/><br/>What else?</p>
+        </div>
+		<div>
+            <img src="assets/cc.jpg" alt="25 Cents" class="card-image">
+            <h3>Car loans car loans car loans!</h3>
+            <p>Get ur car loans here. come come come.</p>
+        </div>
+		<div>
+            <img src="assets/cc.jpg" alt="25 Cents" class="card-image">
+            <h3>some stuff u like</h3>
+            <p>stuff you like stuff you like</p>
+        </div>
+		<div>
+            <img src="assets/cc.jpg" alt="25 Cents" class="card-image">
+            <h3>wanna try lowestrates.ca?</h3>
+            <p>you will love it once you trying it you will love it once you trying it you will love it once you trying it you ·.\•ill love it once you trying it you will love it once you trying it you will love it once you tiying it you will love it once you trying it you will love it once you trying it you will love it once you trying it you will love it once you trying it you will love it once you trying it </p>
+        </div>
+		<div>
+            <img src="assets/cc.jpg" alt="25 Cents" class="card-image">
+            <h3>The Perfect Sandwich. A Real Classic</h3>
+            <p>Just some random text lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        </div>
+		<div>
+            <img src="assets/cc.jpg" alt="25 Cents" class="card-image">
+            <h3>the classic!!</h3>
+            <p>nice come get the classic classic</p>
+        </div>
+        <!-- Repeat similar blocks for other food items -->
+    </section>
+
+    <section>
+        <!-- Add content for the second photo grid -->
+    </section>
+
+    <!-- Pagination -->
+    <div class="pagination">
+        <a href="#">«</a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">»</a>
+    </div>
+
+    <hr>
+
+    <!-- About Section -->
+    <section id="about">
+        <div>
+            <h2>About lowestrates</h2><br>
+            <img src="assets/25cents.png" alt="25 Cents" class="card-image">
+            <div>
+                <h3>What is lowestrates.ca?</h3>
+                <h4><i>you will love it once you try it</i></h4>
+                <p>come get it, best rate comparison site!! come get it, best rate comparison site!! come get it. best rate comparison site!!come get it, best rate comparison site!!come get it, best rate comparison site!!come get it, best rate comparison site!!come get it. best rate comparison site!!come get it, best rate comparison site!!come get it, best rate comparison site!! come get it, best rate comparison site!! come get it, best rate comparison site!!come get it, best rate comparison site!!come get it, best rate comparison site!!</p>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <h3>FOOTER</h3>
+            <p>Best Footer Ever!</p>
+            <p>Lowestrates.ca @ All Rights Reserved</a></p>
+        </div>
+
+        <div>
+            <h3>BLOGS AND ARTICLES</h3>
+            <div>
+                <div class="blog">
+                    <img src="assets/25cents.png" alt="25 Cents" class="blog-image">
+                    <span>Article 1</span><br>
+                    <span>Best Articles</span>
+                </div>
+                <div class="blog">
+                    <img src="assets/25cents.png" alt="25 Cents" class="blog-image">
+                    <span>Article 2</span><br>
+                    <span>Same good stuff</span>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h3>Insurance Types</h3>
+            <p>
+                <span class="tags active">home</span> <span class="tags">auto</span> <span class="tags">car</span>
+                <span class="tags">Toronto</span> <span class="tags">Ontario</span> <span class="tags">Mortgage</span>
+                <span class="tags">insurance</span> <span class="tags">car loans</span> <span class="tags">life insurance</span>
+                <span class="tags">snow bird travel insurance</span> <span class="tags">some long category test list list list list</span> <span class="tags">finance</span>
+                <span class="tags">lowestrates.ca</span> <span class="tags">credit cards</span class="tags">
+            </p>
+        </div>
+    </footer>
+
+</main>
+
+<script>
+    var loginClicked = 0;
+	
+    function toggleSidebar() {   
+        var sidebar = document.getElementById("mySidebar");    
+		if(loginClicked == 1){
+			sidebar.innerHTML = sidebar.innerHTML.replace('<a>Loans</a><a>Finance</a><a>Debt</a>', '');
+			loginClicked--;
+		}
+		sidebar.style.display = (sidebar.style.display === "none" || sidebar.style.display === "") ? "block" : "none";
+    }
+
+    function closeSidebar() {
+	    window.scrollTo({ top: 0, behavior: 'smooth' });
+        document.getElementById("mySidebar").style.display = "none";
+    }
+	
+	function loginClick() {
+		window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+		var sidebar = document.getElementById("mySidebar");
+		if (!sidebar.innerHTML.includes('Loans') && !sidebar.innerHTML.includes('Finance') && !sidebar.innerHTML.includes('Debt')) {
+			sidebar.querySelector('a').insertAdjacentHTML('afterend', '<a>Loans</a><a>Finance</a><a>Debt</a>');
+			loginClicked++;
+		}
+		sidebar.style.display = (sidebar.style.display === "none" || sidebar.style.display === "") ? "block" : "none";
+    }
+</script>
+
+</body>
+
+</html>
